@@ -1,3 +1,6 @@
+
+
+
 const form = document.querySelector("form");
 const name = document.querySelector("#name");
 const email = document.querySelector("#email");
@@ -12,23 +15,23 @@ const languagesInputs = document.querySelectorAll("#languages input");
 const nameValidator = () => {
 
   
-     var nameInput = document.getElementById('nameInput').value;
+  
   console.log(nameInput);
-}  
+ 
 
   
 
 
-if (name.value.length > 0) {
+if (name.value().length > 0) {
   
-   $('#TextBoxID').css('border-color', 'white');
+  name.style.borderColor = white;
  return true;
 }
   
   // 3. Create an if/else statement
     // If the name value.length is greater than zero, set the name input's border to white and return true
-}else { 
-   $('#TextBoxID').css('border-color', 'red');
+else { 
+name.style.borderColor = red;
   return false;
 }
   //set the name input's border to red and return false
@@ -74,8 +77,7 @@ const frameworkValidator = () => {
 const languageValidator = () => {
 
        var nameInput = document.getElementById('nameInput').value;
-}  
-console.log(nameInput);
+  console.log(nameInput);
 
   // 1. Log out the `languagesContainer` and `languagesInputs` variables from above
   // 2. Call this `languageValidator` function in the submit listener below 
@@ -117,4 +119,5 @@ form.addEventListener('submit', (e) => {
 
   // Submit handler test log - Feel free to delete this or comment it out
   console.log('Submit handler is functional!');
-});
+})
+                      };
